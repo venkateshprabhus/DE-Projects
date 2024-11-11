@@ -1,0 +1,8 @@
+wget -O data/raw_data.zip https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0221EN-SkillsNetwork/labs/module%206/Lab%20-%20Extract%20Transform%20Load/data/source.zip
+
+unzip data/raw_data.zip -d data/
+
+aws s3 cp data/ s3://etl-workflows/raw_data --recursive
+
+###After transforming the data
+aws s3 cp data/transformed.csv s3://etl-workflows/transformed_data --recursive

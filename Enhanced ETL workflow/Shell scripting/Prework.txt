@@ -1,0 +1,17 @@
+wget -O /home/ubuntu/venprabhu/rawdata/raw_data.zip https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0221EN-SkillsNetwork/labs/module%206/Lab%20-%20Extract%20Transform%20Load/data/source.zip
+
+Step 1: Since this is an external environment, we are following the below step
+###Creating virtual env
+sudo apt install python3-venv
+python3 -m venv myenv
+### Activate
+source myenv/bin/activate
+pip3 install boto3 pandas sqlalchemy psycopg2-binary  # psycopg2 for PostgreSQL
+##Deactivate once done
+deactivate
+-----OR-----
+Step 2:Installing the packages systemwide
+sudo apt update
+sudo apt install python3-pip -y
+sudo apt install python3-boto3 python3-pandas python3-sqlalchemy python3-psycopg2
+sudo apt install python3-mysql.connector
